@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefWidth="400.0" spacing="20.0" style="-fx-background-color: white; -fx-padding: 30; -fx-border-color: #6f42c1; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddBookController">
+    <children>
+        <Label text="Add New Book" textFill="#6f42c1">
+            <font><Font name="System Bold" size="20.0" /></font>
+        </Label>
+        
+        <TextField fx:id="titleField" promptText="Book Title" style="-fx-background-color: transparent; -fx-border-color: transparent transparent #6f42c1 transparent;" />
+        <TextField fx:id="authorField" promptText="Author" style="-fx-background-color: transparent; -fx-border-color: transparent transparent #6f42c1 transparent;" />
+        <TextField fx:id="isbnField" promptText="ISBN (e.g. 978...)" style="-fx-background-color: transparent; -fx-border-color: transparent transparent #6f42c1 transparent;" />
+        <TextField fx:id="categoryField" promptText="Category (e.g. Fantasy, Tech)" style="-fx-background-color: transparent; -fx-border-color: transparent transparent #6f42c1 transparent;" />
+        <TextField fx:id="quantityField" promptText="Quantity" style="-fx-background-color: transparent; -fx-border-color: transparent transparent #6f42c1 transparent;" />
+        
+        <HBox alignment="CENTER_RIGHT" spacing="15.0">
+            <Button onAction="#cancel" style="-fx-background-color: #6c757d; -fx-text-fill: white;" text="Cancel" />
+            <Button onAction="#saveBook" style="-fx-background-color: #6f42c1; -fx-text-fill: white; -fx-font-weight: bold;" text="Save Book" />
+        </HBox>
+    </children>
+</VBox>

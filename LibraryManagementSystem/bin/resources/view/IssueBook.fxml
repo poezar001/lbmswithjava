@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="555.0" prefWidth="767.0" spacing="20.0" style="-fx-padding: 30; -fx-background-color: #FFEAD1;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IssueBookController">
+    <children>
+        <Label text="Issue / Return Book">
+            <font><Font name="System Bold" size="26.0" /></font>
+        </Label>
+
+        <HBox spacing="30.0">
+            <VBox spacing="15.0" style="-fx-background-color: #f8f9fa; -fx-padding: 20; -fx-background-radius: 15; -fx-border-color: #dee2e6; -fx-border-radius: 15;" HBox.hgrow="ALWAYS">
+                <Label text="Borrow Book Management" textFill="#2c3e50"><font><Font name="System Bold" size="18.0" /></font></Label>
+                
+                <Label text="Book ID" />
+                <TextField fx:id="bookIdField" promptText="Enter Book ID" />
+                
+                <Label text="Member ID" />
+                <TextField fx:id="userIdField" promptText="Enter Member ID" />
+                
+                <Label text="Due Date" />
+                <DatePicker fx:id="dueDatePicker" maxWidth="Infinity" />
+                
+                <Button maxWidth="Infinity" onAction="#handleIssueBook" style="-fx-cursor: hand; -fx-background-color: #fd6F2F;;" styleClass="sidebar-btn-active" text="Confirm Issue" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            </VBox>
+   
+            <VBox spacing="15.0" style="-fx-background-color: #f8f9fa; -fx-padding: 20; -fx-background-radius: 15; -fx-border-color: #dee2e6; -fx-border-radius: 15;" HBox.hgrow="ALWAYS">
+                <Label text="Return Book" textFill="#2c3e50">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+                
+                   <Label text="Book ID" />
+                <TextField fx:id="returnBookIdField" promptText="Enter Book ID to Return" />
+                
+                   <Region VBox.vgrow="ALWAYS" /> 
+                
+                <Button maxWidth="Infinity" onAction="#handleReturnBook" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand;" text="Process Return" />
+            </VBox>
+        </HBox>
+    </children>
+</VBox>

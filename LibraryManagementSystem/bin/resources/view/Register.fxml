@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane prefHeight="650.0" prefWidth="850.0" styleClass="register-bg" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterController">
+   <children>
+      <AnchorPane maxHeight="520.0" maxWidth="450.0" styleClass="glass-pane">
+         <children>
+            <Label layoutX="155.0" layoutY="25.0" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            
+            <VBox layoutX="50.0" layoutY="90.0" prefWidth="350.0" spacing="15.0">
+               <children>
+                  <TextField fx:id="nameField" promptText="Full Name" styleClass="glass-input" />
+                  <TextField fx:id="emailField" promptText="Email Address" styleClass="glass-input" />
+                  <TextField fx:id="phoneField" promptText="Phone Number" styleClass="glass-input" />
+                  <PasswordField fx:id="passwordField" promptText="Password" styleClass="glass-input" />
+                  <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" styleClass="glass-input" />
+               </children>
+            </VBox>
+            
+            <Button layoutX="50.0" layoutY="400.0" onAction="#handleRegister" prefHeight="45.0" prefWidth="350.0" styleClass="gradient-button" text="Create Account" />
+            
+            <HBox alignment="CENTER" layoutX="50.0" layoutY="460.0" prefWidth="350.0" spacing="5.0">
+               <children>
+                  <Label text="Already have an account?" textFill="WHITE" />
+                  <Hyperlink onAction="#goToLogin" style="-fx-font-weight: bold;" text="Login" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

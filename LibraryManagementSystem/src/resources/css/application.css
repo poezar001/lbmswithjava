@@ -1,0 +1,102 @@
+/* Background for Welcome Page */
+.welcome-bg {
+    -fx-background-image: url("/resources/images/welcome.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+/* Background for Login Page */
+.login-bg {
+    -fx-background-image: url("/resources/images/lo.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+/* Background for Register Page */
+.register-bg {
+    -fx-background-image: url("/resources/images/rg.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+/* --- ENHANCED GLASS EFFECT --- */
+
+.glass-pane {
+    /* Increased opacity from 0.15 to 0.25 to make it more visible */
+    -fx-background-color: rgba(255, 255, 255, 0.25); 
+    -fx-background-radius: 30;
+    
+    /* Brighter border to define the glass edges */
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-radius: 30;
+    -fx-border-width: 1.5;
+
+    /* This adds the "glow" effect that makes it look like real glass */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 20, 0, 0, 0);
+}
+
+/* Modern Input styling (thicker underline) */
+.glass-input {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent white transparent;
+    -fx-border-width: 0 0 1.5 0;
+    -fx-text-fill: white;
+    /* Brighter prompt text so it's readable */
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.9);
+}
+
+/* Orange Gradient Button - Unified Style */
+.gradient-button {
+    -fx-background-color: linear-gradient(to right, #260f06, #683924);
+    -fx-background-radius: 25;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    /* Soft shadow under the button */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.gradient-button:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-opacity: 0.9;
+}
+
+
+
+.nav-button {
+    -fx-background-color: linear-gradient(to right, #ff8c00, #ff4500);
+    -fx-text-fill: #ecf0f1;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 20 12 20;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-transition: 0.3s;
+}
+
+/* The modern hover effect */
+.nav-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-text-fill: #3498db;
+    -fx-scale-x: 1.05; /* Slight pop-out effect */
+    -fx-scale-y: 1.05;
+}
+
+/* Effect for the button that is currently selected */
+.nav-button-active {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Modernizing the Table Header */
+.table-view .column-header {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-padding: 10;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="20.0" style="-fx-padding: 30; -fx-background-color: #FFEAD1;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BooksListController">
+    <children>
+        <HBox alignment="CENTER_LEFT" spacing="20">
+            <Label text="Books Library Management" textFill="#2c3e50">
+                <font><Font name="System Bold" size="24.0" /></font>
+            </Label>
+            
+            <TextField fx:id="searchField" prefHeight="35.0" prefWidth="350.0" 
+                       promptText="Search by ID, Title, Author, ISBN, or Category..." 
+                       style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #BDC3C7; -fx-padding: 0 15 0 15;" />
+            
+            <Region HBox.hgrow="ALWAYS" />
+            <Button onAction="#openAddBookPopup" style="-fx-text-fill: white; -fx-background-color: #fd6F2F; -fx-background-radius: 10; -fx-cursor: hand; -fx-font-weight: bold;" text="+ Add New Book" />
+        </HBox>
+
+        <TableView fx:id="booksTable" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 5);" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="colTitle" prefWidth="250.0" text="TITLE" />
+                <TableColumn fx:id="colAuthor" prefWidth="150.0" text="AUTHOR" />
+                <TableColumn fx:id="colIsbn" prefWidth="130.0" text="ISBN" />
+                <TableColumn fx:id="colCategory" prefWidth="120.0" text="CATEGORY" />
+                <TableColumn fx:id="colQuantity" prefWidth="60.0" text="QTY" />
+                <TableColumn fx:id="colStatus" prefWidth="100.0" text="STATUS" />
+                <TableColumn fx:id="colAction" prefWidth="180.0" text="ACTIONS" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>
